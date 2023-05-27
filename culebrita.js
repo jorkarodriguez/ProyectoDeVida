@@ -156,13 +156,34 @@ function mostrarPuntos(puntos) {
 
 function incrementarPuntaje() {
   puntos++;
- 
+
   mostrarPuntos(puntos);
 
   console.log(puntos)
-  if(puntos==1){
-    console.log('mision')
+
+  switch (puntos) {
+    case 2:
+      document.getElementById('inicio').classList.add("esconder")
+      document.getElementById('Vision').classList.remove("esconder")
+      break;
+    case 4:
+      document.getElementById('inicio').classList.add("esconder")
+      document.getElementById('Vision').classList.add("esconder")
+      document.getElementById('Misión').classList.remove("esconder")
+      break;
+    case 6:
+      document.getElementById('inicio').classList.add("esconder")
+      document.getElementById('Vision').classList.add("esconder")
+      document.getElementById('Misión').classList.add("esconder")
+      document.getElementById('Pyv').classList.remove("esconder")
+      
+      break;
+      
+    default:
+      break;
   }
+
+
   SONIDO_GANASTE_PUNTO.play();
 }
 
@@ -213,7 +234,7 @@ function cicloDeJuego() {
     return;
   }
 
-  CTX.clearRect(0, 0, 950, 950);
+  CTX.clearRect(0, 0, 949, 949);
   dibujarParedes(CTX);
   dibujarCulebra(CTX, culebra);
   dibujarComida(CTX, comida);
@@ -222,9 +243,9 @@ function cicloDeJuego() {
 function gameOver() {
   clearInterval(ciclo);
   ciclo = undefined;
-  dibujarTexto(CTX, "¡Siguelo intentando,", 300, 260);
-  dibujarTexto(CTX, "Aprende de tus errores!,", 300, 310);
-  dibujarTexto(CTX, "Click para volver a jugar", 300, 420);
+  dibujarTexto(CTX, "¡Siguelo intentando,", 500, 260);
+  dibujarTexto(CTX, "Aprende de tus errores!,", 500, 310);
+  dibujarTexto(CTX, "Click para volver a jugar", 500, 420);
   CONTENEDOR_NINTENDO.classList.add(CSS_CLASE_SACUDIR_HORIZONTALMENTE);
 }
 
@@ -249,9 +270,9 @@ function empezarJuego() {
 }
 
 dibujarParedes(CTX);
-dibujarTexto(CTX, "¡Click para empezar!", 300, 260);
-dibujarTexto(CTX, "Desktop: Muévete con ↑ ↓ → ←", 300, 310);
-dibujarTexto(CTX, "Móbil: Tap para girar la culebra", 300, 360);
+dibujarTexto(CTX, "¡Click para empezar!", 500, 260);
+dibujarTexto(CTX, "Desktop: Muévete con ↑ ↓ → ←", 500, 310);
+dibujarTexto(CTX, "Móbil: Tap para girar la culebra", 500, 360);
 
 JUEGO_CANVAS.addEventListener("click", function () {
   if (ciclo === undefined) {

@@ -7,7 +7,13 @@ body {
   font-size: 16px;
   touch-action: none;
 }
-
+h1{
+  color: white;
+}
+p{
+  color: white;
+  font-size: 15px;
+}
 #titulo {
   color: white;
   text-align: left;
