@@ -7,7 +7,7 @@ body {
   font-size: 16px;
   touch-action: none;
 }
-h1{
+h1,h3{
   color: white;
 }
 p{
