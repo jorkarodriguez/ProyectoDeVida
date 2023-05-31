@@ -30,7 +30,7 @@ let direccionActual;
 let nuevaDireccion;
 let comida;
 let ciclo;
-let puntos;
+let puntos=0;
 
 /** Dibujar **/
 
@@ -176,9 +176,36 @@ function incrementarPuntaje() {
       document.getElementById('Vision').classList.add("esconder")
       document.getElementById('Misión').classList.add("esconder")
       document.getElementById('Pyv').classList.remove("esconder")
+      break; 
       
-      break;
-      
+      case 8:
+        document.getElementById('inicio').classList.add("esconder")
+        document.getElementById('Vision').classList.add("esconder")
+        document.getElementById('Misión').classList.add("esconder")
+        document.getElementById('Pyv').classList.add("esconder")
+        document.getElementById('ap').classList.remove("esconder")
+        objMision
+        break;
+
+        case 10:
+          document.getElementById('inicio').classList.add("esconder")
+          document.getElementById('Vision').classList.add("esconder")
+          document.getElementById('Misión').classList.add("esconder")
+          document.getElementById('Pyv').classList.add("esconder")
+          document.getElementById('ap').classList.add("esconder")
+          document.getElementById('objMision').classList.remove("esconder")
+          
+          break;
+          case 12:
+            document.getElementById('inicio').classList.add("esconder")
+            document.getElementById('Vision').classList.add("esconder")
+            document.getElementById('Misión').classList.add("esconder")
+            document.getElementById('Pyv').classList.add("esconder")
+            document.getElementById('ap').classList.add("esconder")
+            document.getElementById('objMision').classList.add("esconder")
+            document.getElementById('metas').classList.remove("esconder")
+            break;
+        
     default:
       break;
   }
@@ -260,7 +287,7 @@ function empezarJuego() {
   nuevaDireccion = DIRECCIONES.DERECHA;
 
   comida = generarNuevaPosicionDeComida(culebra);
-  puntos = 0;
+  //puntos = 0;
 
   mostrarPuntos(puntos);
 
