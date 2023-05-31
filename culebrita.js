@@ -205,6 +205,18 @@ function incrementarPuntaje() {
             document.getElementById('objMision').classList.add("esconder")
             document.getElementById('metas').classList.remove("esconder")
             break;
+
+          case 14:
+            document.getElementById('inicio').classList.add("esconder")
+            document.getElementById('Vision').classList.add("esconder")
+            document.getElementById('Misión').classList.add("esconder")
+            document.getElementById('Pyv').classList.add("esconder")
+            document.getElementById('ap').classList.add("esconder")
+            document.getElementById('objMision').classList.add("esconder")
+            document.getElementById('metas').classList.add("esconder")
+            document.getElementById('AspectosAconsiderar').classList.remove("esconder")
+
+            break;
         
     default:
       break;
