@@ -217,6 +217,32 @@ function incrementarPuntaje() {
             document.getElementById('AspectosAconsiderar').classList.remove("esconder")
 
             break;
+            case 16:
+              document.getElementById('inicio').classList.add("esconder")
+              document.getElementById('Vision').classList.add("esconder")
+              document.getElementById('Misión').classList.add("esconder")
+              document.getElementById('Pyv').classList.add("esconder")
+              document.getElementById('ap').classList.add("esconder")
+              document.getElementById('objMision').classList.add("esconder")
+              document.getElementById('metas').classList.add("esconder")
+              document.getElementById('AspectosAconsiderar').classList.add("esconder")
+              document.getElementById('Principios').classList.remove("esconder")
+              break;
+
+
+              case 18:
+                document.getElementById('inicio').classList.add("esconder")
+                document.getElementById('Vision').classList.add("esconder")
+                document.getElementById('Misión').classList.add("esconder")
+                document.getElementById('Pyv').classList.add("esconder")
+                document.getElementById('ap').classList.add("esconder")
+                document.getElementById('objMision').classList.add("esconder")
+                document.getElementById('metas').classList.add("esconder")
+                document.getElementById('AspectosAconsiderar').classList.add("esconder")
+                document.getElementById('Principios').classList.add("esconder")
+                document.getElementById('Estrategias').classList.remove("esconder")
+                break;
+            
         
     default:
       break;
